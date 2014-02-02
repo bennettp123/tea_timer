@@ -1,5 +1,5 @@
 {
-    "versionLabel": "1.0",
+    "versionLabel": "1.1",
     "uuid": "081b46ac-5530-413c-b82e-a192fb698838",
     "appKeys": {},
     "longName": "Tea Timer",
@@ -8,11 +8,23 @@
         ""
     ],
     "shortName": "Tea Timer",
-    "companyName": "",
+    "companyName": "bennett",
     "watchapp": {
         "watchface": false
     },
     "resources": {
-        "media": []
+        "media": [
+            {
+                "type": "png",
+                "name": "MENU_ICON_INVERTED",
+                "file": "images/teatimer-menuico_i.png"
+            },
+            {
+                "menuIcon": true,
+                "type": "png",
+                "name": "MENU_ICON",
+                "file": "images/teatimer-menuico.png"
+            }
+        ]
     }
 }
