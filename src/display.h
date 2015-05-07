@@ -10,4 +10,11 @@ void initialize_display();
 void deinitialize_display();
 Window* get_window();
 
+#ifdef PBL_COLOR
+#define BGCOLOR GColorDukeBlue
+#else
+#define BGCOLOR GColorBlack
+#endif
+#define FGCOLOR GColorWhite
+
 #endif

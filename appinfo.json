@@ -1,30 +1,36 @@
 {
-    "versionLabel": "1.1",
-    "uuid": "081b46ac-5530-413c-b82e-a192fb698838",
     "appKeys": {},
-    "longName": "Tea Timer",
-    "versionCode": 14,
     "capabilities": [
         ""
     ],
-    "shortName": "Tea Timer",
     "companyName": "bennett",
-    "watchapp": {
-        "watchface": false
-    },
+    "longName": "Tea Timer",
+    "projectType": "native",
     "resources": {
         "media": [
             {
-                "type": "png",
-                "name": "MENU_ICON_INVERTED",
-                "file": "images/teatimer-menuico_i.png"
+                "file": "images/teatimer-menuico.png",
+                "menuIcon": true,
+                "name": "MENU_ICON",
+                "type": "png"
             },
             {
-                "menuIcon": true,
-                "type": "png",
-                "name": "MENU_ICON",
-                "file": "images/teatimer-menuico.png"
+                "file": "images/teatimer-menuico_i.png",
+                "name": "MENU_ICON_INVERTED",
+                "type": "png"
             }
         ]
+    },
+    "sdkVersion": "3",
+    "shortName": "Tea Timer",
+    "targetPlatforms": [
+        "aplite",
+        "basalt"
+    ],
+    "uuid": "081b46ac-5530-413c-b82e-a192fb698838",
+    "versionCode": 14,
+    "versionLabel": "1.1",
+    "watchapp": {
+        "watchface": false
     }
 }

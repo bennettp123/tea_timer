@@ -26,16 +26,16 @@ void update_display_with_time(int time_left) {
 }
 
 void alert() {
+	TOGGLE(light_enabled);
     vibes_short_pulse();
-    TOGGLE(light_enabled);
     // XXX Need to figure out how to do this in a way that doesn't cause the
     // light to just stay on.
     //light_enable(light_enabled);
 }
 
 void warning() {
-    int foreground = (flash_background ? GColorBlack : GColorWhite);
-    int background = (flash_background ? GColorWhite : GColorBlack);
+	GColor background = (flash_background ? FGCOLOR : BGCOLOR);
+	GColor foreground = (flash_background ? BGCOLOR : FGCOLOR);
     text_layer_set_text_color(timer, foreground);
     window_set_background_color(window, background);
     TOGGLE(flash_background);
@@ -49,12 +49,16 @@ void initialize_display() {
 	Window *old_window = window;
 	TextLayer *old_timer = timer;
 	
+	GColor background = BGCOLOR;
+	GColor foreground = FGCOLOR;
+	
 	window = window_create();
 	window_stack_push(window, true);
-  	window_set_background_color(window, GColorBlack);
+
+  	window_set_background_color(window, background);
 
 	timer = text_layer_create(GRect(14, 49, 130, 50));
-	text_layer_set_text_color(timer, GColorWhite);
+	text_layer_set_text_color(timer, foreground);
 	text_layer_set_background_color(timer, GColorClear);
 	text_layer_set_font(timer, fonts_get_system_font(FONT_KEY_BITHAM_42_MEDIUM_NUMBERS));
 	
